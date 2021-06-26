@@ -1,6 +1,7 @@
 package com.egen.Service;
 
 import com.egen.Exception.OrderNotFound;
+import com.egen.Model.Order;
 import com.egen.Model.OrderDetails;
 import com.egen.Repository.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +22,7 @@ public class OrderServiceImp implements OrderService{
         this.repository = repository;
     }
 
-    public  List<OrderDetails> getAllOrders() {
+    public List<Order> getAllOrders() {
         return (List<OrderDetails>) repository.findAll();
     }
 

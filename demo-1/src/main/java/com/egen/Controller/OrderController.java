@@ -4,6 +4,7 @@ package com.egen.Controller;
 
 import com.egen.Service.OrderService;
 import com.egen.Model.Order;
+import com.egen.Service.kafka.producer.producerServiceimpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,6 +21,7 @@ import java.util.List;
 
         @Autowired
         private OrderService orderService;
+        private producerServiceimpl producerService;
 
         @GetMapping("")
         public List<Order> getAllOrders(){
